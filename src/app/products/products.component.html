@@ -11,11 +11,17 @@
 
   <!-- Start Of Original Code -->
 
-  <div class="head-el">
+<div class="head-el">
     <div><h1 id="title-el"></h1></div>
 
 
     <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">ALL</a>
         </li>
@@ -33,6 +39,19 @@
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">KIDS</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              Dropdown link
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
 </div>
@@ -71,7 +90,17 @@
             </div>
           </div>
       </div>
-
+      <div class="paging">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
       <app-product-detail [product]="selectedProduct"></app-product-detail>
 
        
