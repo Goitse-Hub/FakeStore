@@ -1,0 +1,51 @@
+
+body{
+	width: 100%;
+}
+
+footer{
+    // display: block;
+    margin-top: 5%;
+    // position:  fixed;
+    bottom: 0%;
+    width: 100%;
+    color: white;
+}
+
+#email-news{
+    width: 250px;
+}
+
+#top-footer, #bottom-footer{
+    background-color: #2f2f2f;
+    
+}
+
+#bottom-footer{
+    color: white;
+}
+
+#middle-footer{
+background-color: #f6f6f6;
+color: black;
+
+position: relative;
+left: 10rem;
+}
+
+#email-news{
+    background-color: transparent;
+    color: white;
+    border-color: #f6f6f6;
+    border-style: solid;
+}
+
+#info-align{
+    text-align: left;
+}
+
+ul li{
+    display: inline-block;
+    padding-left:  10px;
+    padding-right: 10px;
+}

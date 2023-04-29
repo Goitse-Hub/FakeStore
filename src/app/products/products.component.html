@@ -1,0 +1,77 @@
+
+<!-- <div class="card" style="width: 18rem;">
+    <img src="https://thefoschini.vtexassets.com/arquivos/ids/51183576-1200-1200?v=638168472986870000&width=1200&height=1200&aspect=true" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+
+  <!-- Start Of Original Code -->
+
+  <div class="head-el">
+    <div><h1 id="title-el"></h1></div>
+
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">ALL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MEN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">WOMEN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">JEWELLERY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GADGETS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">KIDS</a>
+        </li>
+      </ul>
+</div>
+<hr id="line">
+
+  <!-- <div class="container"  >
+    <div id="car-align" *ngFor="let product of products">
+        <div class="card"  style="width: 12rem;" [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">
+          <img [src]='product.imageUrl' class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">R {{product.price}}</p>
+            <pre><button id="minus" (click)="size('min')">-</button> <b> Size {{productsize}} </b><button id="plus" (click)="size('max')">+</button></pre>
+            <div id="center-btn"><a href="#" class="btn btn-primary" id="cart-btn">Add To Cart</a></div>
+          </div>
+        </div>
+      </div>
+  </div> -->
+
+  <!-- <app-product-detail [product]="selectedProduct"></app-product-detail> -->
+ 
+      <!-- End Of Original Code -->
+
+      <div class="container"  >
+        <div id="car-align" *ngFor="let product of productList">
+            <div class="card"  style="width: 12rem;" [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">
+              <img [src]='product.image' class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch">{{product.title}}</h5>
+                <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch">{{product.description}}</p>
+                <p class="card-text">R {{product.price}}</p>
+                <!-- <pre><button id="minus" (click)="size('min')">-</button> <b> Size {{productsize}} </b><button id="plus" (click)="size('max')">+</button></pre> -->
+                <div id="center-btn"><a class="btn btn-primary" id="cart-btn" (click)="addtocart(product)">Add To Cart</a></div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <app-product-detail [product]="selectedProduct"></app-product-detail>
+
+       

@@ -1,0 +1,43 @@
+body{
+    width: 100%;
+}
+
+#cart-icon{
+    width: 30px;
+    height: 30px;
+}
+
+#btn-cart{
+    width: 10rem;
+    border-color: transparent;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+#btn-cart:hover{
+    transition: 0.3 ease-in-out;
+    transform: scale(1.1);
+}
+
+#logo{
+    width: 40px;
+    position: relative;
+    top: -5px;
+   
+    
+}
+
+#nav{
+    background-color: #2f2f2f;
+    height: 5rem;
+    
+}
+
+#header-el{
+    color: white;
+    font-size: 35px;
+}
+
+#hide-mes{
+    font-size: 0;
+}

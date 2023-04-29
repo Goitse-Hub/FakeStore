@@ -1,0 +1,19 @@
+
+<nav class="navbar bg-body-tertiary" id="nav">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="header-el" routerLink="/"> <img src="https://img.icons8.com/ios/512/shopaholic.png" id="logo"> Ye Sneaker Collectors</a>
+    <form class="d-flex" role="search">
+      <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+      <button type="button" class="btn btn-primary position-relative" routerLink="/Cart" id="btn-cart">
+        <img id="cart-icon" src="https://img.icons8.com/dotty/512/shopping-cart.png">
+        CART
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{totalItemsinCart}}
+          <span class="visually-hidden" id="hide-mes">items in cart</span>
+        </span>
+      </button>
+
+      <!-- <button class="btn btn-outline-success" id="btn-cart" type="submit" routerLink="/Cart"> <img id="cart-icon" src="https://img.icons8.com/dotty/512/shopping-cart.png"> CART</button> -->
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+<!-- <div *ngIf="product">
+
+    <h2>{{product.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{product.id}}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="product.name" placeholder="name">
+    </div>
+  
+  </div> -->
+
+  <div class="card mb-3" style="max-width: 100rem; height: 30rem;" *ngIf="product">
+    <div class="row g-0" >
+      <div class="col-md-4">
+        <img id="pro-img" src="{{product.imageUrl}}" style="height: 30rem" class="img-fluid rounded-start" alt="...">
+        
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name | uppercase}} Details</h5>
+          <h6> R {{product.price}} </h6>
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <pre><button id="minus" (click)="size('min')">-</button> <b> Size {{productsize}} </b><button id="plus" (click)="size('max')">+</button></pre>
+          <!-- <div id="center-btn"><a href="#" class="btn btn-primary" id="cart-btn" (click)="addCart('cart')">Add To Cart</a></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+

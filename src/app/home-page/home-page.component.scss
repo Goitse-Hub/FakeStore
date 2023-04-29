@@ -1,0 +1,144 @@
+h2{
+    text-align: center;
+}
+
+.card{
+    margin-top: 20px;
+    width: 200px;
+    // height: 10px;
+    // padding: 20px;
+    // background-color: black;
+    
+}
+
+img{
+    border-radius: 10px;
+}
+table{
+    padding: 50px;
+    position: relative;
+    top: -50px;
+    
+}
+.tRow1{
+    margin-bottom: 20px;
+    padding-bottom: 300px;
+    padding-left: 70px;
+}
+
+.tRow2{
+    margin-top: 40px;
+    padding-left: 70px;
+    padding-bottom: 400px;
+    
+}
+
+tr td {
+    padding: 10px;
+}
+.container{
+    align-items: center;
+    
+}
+
+.head-el{
+    text-align: center;
+}
+
+.inline-el{
+    
+    justify-content:space-between;
+    flex-direction: row;
+
+}
+
+.change-dir{
+    flex-direction: row;
+}
+
+ul { 
+    padding: 0px;
+ }
+ li {
+    float: left;
+    width: auto;
+    list-style: outside none none;
+    padding: 15px;
+    font-size: large;
+    
+    
+ }
+
+ .gen-sec{
+    position: relative;
+    left: 39%;
+    
+ }
+
+ #title-el{
+    position: relative;
+    left: 80px;
+    padding-top: 15px;
+ }
+
+a{
+    text-decoration: none;
+
+    color: #2f2f2f;
+}
+
+
+button{
+    background-color: #ff1f06;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+#minus{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+}
+
+#plus{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+}
+
+#line{
+    position: relative;
+    left: -170px;
+}
+
+body{
+	margin:0;
+	min-height:100vh;
+}
+
+#back-el{
+background-color: transparent;
+}
+
+#forward-el{
+    background-color: transparent;
+}
+
+#header{
+    text-align: center;
+    background-color: #f6f6f6;
+    margin-bottom: 0;
+    height: 4rem;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+img{
+    cursor: pointer;
+}
