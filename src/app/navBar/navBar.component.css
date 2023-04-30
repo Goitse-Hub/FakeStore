@@ -30,6 +30,7 @@ body{
 #nav{
     background-color: #2f2f2f;
     height: 5rem;
+     width: 100%;
     
 }
 
@@ -41,3 +42,4 @@ body{
 #hide-mes{
     font-size: 0;
 }
+

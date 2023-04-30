@@ -12,7 +12,7 @@ export class CartService {
   //Need To Initialize Product Array
   public productList = new BehaviorSubject<any>([])
 
-
+  public search = new BehaviorSubject<string>("")
 
   constructor() { }
   getProducts(){

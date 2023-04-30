@@ -12,9 +12,16 @@ import { CartService } from '../cart.service';
 
 export class ProductsComponent  {
 
+
   products = PRODUCTS;
 
   selectedProduct?: Product;
+
+  //for filtering products by search
+  search:string = ''
+  searchTerm: string = ''
+
+ 
 
   onSelect(product: Product): void {
     this.selectedProduct = product;
@@ -45,9 +52,20 @@ export class ProductsComponent  {
         Object.assign(x,{quantity:1,total:x.price})
       });
     })
+
+    this.cartService.search.subscribe((val:any) =>{
+      this.search =val
+    })
   }
 
   //End Of Api Services
+
+  searches(event:any){
+    this.searchTerm = (event.target as HTMLInputElement).value
+    console.log(this.searchTerm)
+    this.cartService.search.next(this.searchTerm)
+  }
+
 
   //Start Of Cart Services
 
@@ -77,6 +95,7 @@ export class ProductsComponent  {
   }
 
 
+  
   
 
 

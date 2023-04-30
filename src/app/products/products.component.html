@@ -15,10 +15,10 @@
     <div><h1 id="title-el"></h1></div>
 
 
-    <ul class="nav justify-content-center">
+    <ul class="nav justify-content-center" id="list-items">
       <li class="nav-item">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup)="searches($event)" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </li>
@@ -77,7 +77,7 @@
       <!-- End Of Original Code -->
 
       <div class="container"  >
-        <div id="car-align" *ngFor="let product of productList">
+        <div id="car-align" *ngFor="let product of productList | filtering:search:'title'">
             <div class="card"  style="width: 12rem;" [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">
               <img [src]='product.image' class="card-img-top" alt="...">
               <div class="card-body">
