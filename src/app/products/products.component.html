@@ -23,19 +23,20 @@
         </form>
       </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">ALL</a>
+          <!-- Empty String To Display All Products -->
+          <a class="nav-link active" aria-current="page" (click)="filter('')">ALL</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">MEN</a>
+          <a class="nav-link"  (click)="filter('Men')">MEN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">WOMEN</a>
+          <a class="nav-link" (click)="filter('Women')">WOMEN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">JEWELLERY</a>
+          <a class="nav-link" (click)="filter('jewelery')">JEWELLERY</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">GADGETS</a>
+          <a class="nav-link" (click)="filter('electronics')">GADGETS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">KIDS</a>
@@ -77,7 +78,8 @@
       <!-- End Of Original Code -->
 
       <div class="container"  >
-        <div id="car-align" *ngFor="let product of productList | filtering:search:'title'">
+        <!-- replaced productList by filterByCategory as it does the same thing  -->
+        <div id="car-align" *ngFor="let product of filterByCategory | filtering:search:'title'">
             <div class="card"  style="width: 12rem;" [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">
               <img [src]='product.image' class="card-img-top" alt="...">
               <div class="card-body">
@@ -90,8 +92,9 @@
             </div>
           </div>
       </div>
+      <hr>
       <div class="paging">
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation example" id="pager">
         <ul class="pagination">
           <li class="page-item"><a class="page-link" href="#">Previous</a></li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -101,6 +104,7 @@
         </ul>
       </nav>
     </div>
+    <hr>
       <app-product-detail [product]="selectedProduct"></app-product-detail>
 
        

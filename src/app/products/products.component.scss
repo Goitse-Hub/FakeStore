@@ -68,9 +68,15 @@ footer {
 }
 
 .paging{
-    position: relative;
+    display: flex;
+    margin-top: 2.5rem;
+    
+    justify-content: center;
+    margin-left: -1rem;
+    // align-items: center;
     
 }
+
 
 .head-el{
     justify-content: space-between;

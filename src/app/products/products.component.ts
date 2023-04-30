@@ -21,6 +21,7 @@ export class ProductsComponent  {
   search:string = ''
   searchTerm: string = ''
 
+
  
 
   onSelect(product: Product): void {
@@ -35,6 +36,8 @@ export class ProductsComponent  {
   //created property to store all the data
   public productList : any;
 
+  public filterByCategory: any;
+
   //inject Apidata service 
   //Also inject cart services
   constructor(private api: ApidataService, private cartService: CartService ){
@@ -46,9 +49,16 @@ export class ProductsComponent  {
     this.api.getProducts()
     .subscribe(res=>{
       this.productList = res;
-
+      //use the same property to store filter values
+      this.filterByCategory = res;
       // To Use Quantity And Total
       this.productList.forEach((x:any) => {
+        // filtering by category tabs
+        if(x.category === "men's clothing"){
+          x.category = "Men"
+        } else if(x.category === "women's clothing"){
+          x.category = "Women"
+        }
         Object.assign(x,{quantity:1,total:x.price})
       });
     })
@@ -74,6 +84,14 @@ export class ProductsComponent  {
     this.cartService.addToCart(product);
   }
   
+  filter(category:string){
+      this.filterByCategory = this.productList
+      .filter((x:any) =>{
+        if(x.category == category || category ==''){
+          return x
+        }
+      })
+  }
 
 
   decrement(value:string){
