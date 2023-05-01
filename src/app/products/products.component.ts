@@ -17,8 +17,11 @@ export class ProductsComponent  {
 
   selectedProduct?: Product;
 
+  
   //for filtering products by search
-  search:string = ''
+  // created search property
+  search:string = '' 
+  // created searchterm property
   searchTerm: string = ''
 
 
@@ -70,9 +73,13 @@ export class ProductsComponent  {
 
   //End Of Api Services
 
+  //created searches method for our trigger/keyup event
   searches(event:any){
+    //pass in the searchTerm
     this.searchTerm = (event.target as HTMLInputElement).value
+    //testing our filtering
     console.log(this.searchTerm)
+    
     this.cartService.search.next(this.searchTerm)
   }
 

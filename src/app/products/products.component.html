@@ -18,7 +18,11 @@
     <ul class="nav justify-content-center" id="list-items">
       <li class="nav-item">
         <form class="d-flex" role="search">
+                                                          <!--Filtering  -->
+                                                          <!-- NgModel will help us bind the input & import formsmodule in app.ts-->
+                                                <!--create searchterm property -->  <!-- trigger a method/event when key is pressed -->
           <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup)="searches($event)" placeholder="Search" aria-label="Search">
+                                                                                        <!-- create searches method -->
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </li>
@@ -43,7 +47,7 @@
         </li>
         <li class="nav-item">
           <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown link
             </a>
           
@@ -79,6 +83,9 @@
 
       <div class="container"  >
         <!-- replaced productList by filterByCategory as it does the same thing  -->
+                                                                      <!-- calling the filtering pipe and use tiltle  -->
+                                                                      <!-- create property called search inside ts -->
+                                      <!-- Left: Our Value       |Pipe| filterString   -propertyname  / search will come fro our search input line 21--> 
         <div id="car-align" *ngFor="let product of filterByCategory | filtering:search:'title'">
             <div class="card"  style="width: 12rem;" [class.selected]="product === selectedProduct" type="button" (click)="onSelect(product)">
               <img [src]='product.image' class="card-img-top" alt="...">
