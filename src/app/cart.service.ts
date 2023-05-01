@@ -12,6 +12,8 @@ export class CartService {
   //Need To Initialize Product Array
   public productList = new BehaviorSubject<any>([])
 
+  //This behaviorSubject will help us send our data from searchbar to our productlist
+  //to enable filtering 
   public search = new BehaviorSubject<string>("")
 
   constructor() { }

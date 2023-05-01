@@ -65,7 +65,8 @@ export class ProductsComponent  {
         Object.assign(x,{quantity:1,total:x.price})
       });
     })
-
+    // The value from the observable/behavior subject will be assigned to the search
+    //line 23
     this.cartService.search.subscribe((val:any) =>{
       this.search =val
     })
@@ -79,7 +80,7 @@ export class ProductsComponent  {
     this.searchTerm = (event.target as HTMLInputElement).value
     //testing our filtering
     console.log(this.searchTerm)
-    
+    //Emit the search term (BehaviorSubject created in cartservice)
     this.cartService.search.next(this.searchTerm)
   }
 
