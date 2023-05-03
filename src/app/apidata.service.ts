@@ -17,4 +17,6 @@ export class ApidataService {
       return res;
     }))
   }
+
+  
 }

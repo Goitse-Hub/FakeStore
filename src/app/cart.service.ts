@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Console } from 'console';
 import { BehaviorSubject } from 'rxjs';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 
 @Injectable({
   providedIn: 'root'
@@ -42,13 +44,22 @@ export class CartService {
   }
 
   deleteCartProduct(product:any){
-    this.cartItem.map((x:any, index:any) =>{
-      if(product.id === x.id){
-        this.cartItem.splice(index, 1);
-      }
-    })
-    this.productList.next(this.cartItem)
+    const index: number  = this.cartItem.indexOf(product);
+    if(index !== -1)
+    {
+      this.cartItem.splice(index, 1);
+      this.productList.next(this.cartItem)
+    }
+    // this.cartItem.map((x:any, index:any) =>{
+
+    //   if(product.id === x.id){
+    //     this.cartItem.splice(index, 1);
+    //     console.log(x)
+    //   }
+    // })
+    // this.productList.next(this.cartItem)
   }
+
 
   deleteAllCart(){
     this.cartItem = []
